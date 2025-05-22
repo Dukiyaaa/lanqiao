@@ -549,6 +549,7 @@ void key_task(void)
 				}
 			}
 			
+			// 只要key4没按，都需要清0
 			key_buffer[3].key_is_long = 0;
 			key_buffer[3].key_time = 0;
 		}

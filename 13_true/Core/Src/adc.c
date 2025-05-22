@@ -165,66 +165,6 @@ extern float A_4, A_5, T_4, T_5, H_4, H_5;
 uint8_t first4 = 1, first5 = 1;
 double pa4_sum, pa5_sum;
 
-//uint32_t adc_dma_buffer[2]; // DMA 缓冲�?
-//void adc_init(void)
-//{
-//	HAL_ADC_Start_DMA(&hadc2, adc_dma_buffer, 2);  // 每次填充2个�?�道数据
-//}
-
-//void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
-//{
-//    if (hadc->Instance == ADC2)
-//    {
-//        pa5 = ((float)adc_dma_buffer[0]) * 3.3f / 4095.0f;
-//        pa4 = ((float)adc_dma_buffer[1]) * 3.3f / 4095.0f;
-
-//        pa5_lock = 0;
-//        pa4_lock = 0;
-//    }
-//}
-
-//void adc_task(void)
-//{
-//    if (pa5_lock == 0 && pa4_lock == 0)
-//    {
-//        pa4_lock = 1;
-//        pa5_lock = 1;
-
-//        if (first4)
-//        {
-//            first4 = 0;
-//            t4 = 3.4;
-//        }
-
-//        if (first5)
-//        {
-//            first5 = 0;
-//            t5 = 3.4;
-//        }
-
-//        pa4_sum += pa4;
-//        pa5_sum += pa5;
-
-//        if (pa4 > a4) a4 = pa4;
-//        if (pa4 < t4) t4 = pa4;
-
-//        if (pa5 > a5) a5 = pa5;
-//        if (pa5 < t5) t5 = pa5;
-
-//        N_4++;
-//        N_5++;
-
-//        if (N_4) h4 = pa4_sum / N_4;
-//        if (N_5) h5 = pa5_sum / N_5;
-
-//        PA4 = pa4;
-//        PA5 = pa5;
-//        A_4 = a4; A_5 = a5;
-//        T_4 = t4; T_5 = t5;
-//        H_4 = h4; H_5 = h5;
-//    }
-//}
-
 void adc_task(void)
 {
 	if(pa5_lock == 0 && pa4_lock == 0)
