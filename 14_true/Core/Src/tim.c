@@ -635,7 +635,7 @@ void key_task(void)
 						{
 							// [记录]记录R37，PA1捕获，设备锁定不可按键操�?
 							device_lock = 1;
-							HAL_Delay(1000);	// 测评点感觉有延后
+//							HAL_Delay(1000);	// 测评点感觉有延后
 							record_flag = 1;
 						}
 						else if(lcd_num == 1)
